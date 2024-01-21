@@ -8,7 +8,18 @@
 <body>
     <h1>Welcome to the Main Page</h1>
     
-    <!-- Link to open another.html -->
-    <a href="1st.html">Open Another HTML File</a>
+    <!-- Container to display content from another.html -->
+    <div id="contentContainer"></div>
+
+    <script>
+        // Use the Fetch API to get the content of another.html
+        fetch('1st.html')
+            .then(response => response.text())
+            .then(html => {
+                // Inject the content into the contentContainer div
+                document.getElementById('contentContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    </script>
 </body>
 </html>
