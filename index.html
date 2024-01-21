@@ -29,14 +29,6 @@
                 document.getElementById('contentContainer').innerHTML = html;
             })
             .catch(error => console.error('Error fetching content:', error));
-
-        fetch('2nd.html')
-            .then(response => response.text())
-            .then(html => {
-                // Inject the content into the contentContainer div
-                document.getElementById('contentContainer').innerHTML = html;
-            })
-            .catch(error => console.error('Error fetching content:', error));
     </script>
 </body>
 </html>
